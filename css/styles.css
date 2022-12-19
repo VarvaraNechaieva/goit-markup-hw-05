@@ -64,18 +64,29 @@ span {
   display: flex;
   align-items: center;
 }
+
 .nav-item:not(:last-child) {
   margin-right: 40px;
 }
+
 .site-nav {
   display: flex;
   align-items: center;
 }
 
+.site-nav .link {
+  transition: color var(--transition-duration-function);
+}
+
+.link.current {
+  transition: background-color var(--transition-duration-function),
+    box-shadow var(--transition-duration-function);
+}
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: var(--primary-text-color);
+  color: var(--accent-color);
 }
+
 .site-nav .link:active {
   color: var(--accent-color);
 }
@@ -87,13 +98,14 @@ span {
 }
 
 .link {
-  transition: color var(--transition-duration-function);
   color: var(--secondary-text-color);
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
 
   text-decoration: none;
+
+  transition: color var(--transition-duration-function);
 }
 
 .link.current::after {
@@ -129,7 +141,7 @@ span {
 
   text-decoration: none;
 
-  transition: background-color var(--transition-duration-function);
+  transition: color var(--transition-duration-function);
 }
 .contacts:hover,
 .contacts:focus {
@@ -181,7 +193,8 @@ span {
   line-height: 1.9;
   letter-spacing: 0.04em;
 
-  transition: background-color var(--transition-duration-function);
+  transition: background-color var(--transition-duration-function),
+    box-shadow var(--transition-duration-function);
 }
 
 .order-button:hover,
@@ -349,7 +362,9 @@ span {
   justify-content: center;
   border-radius: 4px;
 
-  transition: background-color var(--transition-duration-function);
+  transition: color var(--transition-duration-function),
+    border var(--transition-duration-function),
+    fill var(--transition-duration-function);
 }
 
 .customers-link:hover,
@@ -380,7 +395,9 @@ span {
   text-align: center;
   letter-spacing: 0.04em;
 
-  transition: background-color var(--transition-duration-function);
+  transition: background-color var(--transition-duration-function),
+    color var(--transition-duration-function),
+    box-shadow var(--transition-duration-function);
 }
 
 .secondary-button:focus,
@@ -422,7 +439,8 @@ span {
   background-color: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 
-  transition: background-color var(--transition-duration-function);
+  transition: background-color var(--transition-duration-function),
+    box-shadow var(--transition-duration-function);
 }
 
 .services:hover,
@@ -555,7 +573,8 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
 
-  transition: background-color var(--transition-duration-function);
+  transition: background-color var(--transition-duration-function),
+    fill var(--transition-duration-function);
 }
 
 .modal-button:hover,
